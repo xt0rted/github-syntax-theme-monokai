@@ -1,0 +1,170 @@
+/* ==UserStyle==
+@name        GitHub Syntax Theme Monokai
+@namespace   xt0rted
+@version     1.0.0
+@homepageURL https://github.com/xt0rted/github-syntax-theme-monokai
+@updateURL   https://raw.githubusercontent.com/xt0rted/github-syntax-theme-monokai/main/github-syntax-theme-monokai.user.css
+@license     CC-BY-SA-4.0
+@author      Brian Surowiec (https://github.com/xt0rted)
+==/UserStyle== */
+@-moz-document domain("github.com") {
+  [data-color-mode]  {
+      --color-search-keyword-hl: rgba(187, 128, 9, 0.4);
+
+      --color-blob-line-highlight-bg: rgb(187, 128, 9, .1);
+      --color-blob-line-highlight-border: #bb8009;
+
+      --color-diff-blob-num-text: rgba(240, 246, 252, 0.3);
+      --color-diff-blob-num-hover-text: rgba(240, 246, 252, 0.6);
+      --color-diff-blob-addition-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-addition-num-hover-text: rgba(220, 220, 220, .6);
+      --color-diff-blob-addition-num-bg: #0a320a;
+      --color-diff-blob-addition-line-bg: #002801;
+      --color-diff-blob-addition-word-bg: rgba(35, 134, 54, 0.3);
+      --color-diff-blob-deletion-num-text: rgba(220, 220, 220, .4);
+      --color-diff-blob-deletion-num-hover-text: rgba(220, 220, 220, .6);
+      --color-diff-blob-deletion-num-bg: #420a0a;
+      --color-diff-blob-deletion-line-bg: #380000;
+      --color-diff-blob-deletion-word-bg: rgba(218, 54, 51, 0.3);
+      --color-diff-blob-empty-block-bg: #181818;
+
+      --color-prettylights-syntax-comment: #75715e;
+      --color-prettylights-syntax-constant: #ae81ff;
+      --color-prettylights-syntax-entity: #a6e22e;
+      --color-prettylights-syntax-storage-modifier-import: #66d9ef;
+      --color-prettylights-syntax-entity-tag: #f92672;
+      --color-prettylights-syntax-keyword: #f92672;
+      --color-prettylights-syntax-string:  #E6DB74;
+      --color-prettylights-syntax-variable: #66d9ef;
+      --color-prettylights-syntax-brackethighlighter-unmatched: #fd971f;
+      --color-prettylights-syntax-invalid-illegal-text: #272822;
+      --color-prettylights-syntax-invalid-illegal-bg: #a6e22e;
+      --color-prettylights-syntax-string-regexp: #a6e22e;
+      --color-prettylights-syntax-markup-heading: #66d9ef;
+      --color-prettylights-syntax-meta-diff-range: #66d9ef;
+
+      --color-codemirror-text: #f8f8f2;
+      --color-codemirror-bg: #141414; /* #272822 */
+      --color-codemirror-gutters-bg: #141414; /* #272822 */
+      --color-codemirror-guttermarker-text: red;
+      --color-codemirror-guttermarker-subtle-text: red;
+      --color-codemirror-linenumber-text: #d0d0d0 ;
+      --color-codemirror-cursor: #f8f8f0;
+      --color-codemirror-selection-bg: rgba(73, 72, 62, .99);
+      --color-codemirror-activeline-bg: #373831;
+      --color-codemirror-matchingbracket-text: red;
+      --color-codemirror-lines-bg: #141414; /* #272822 */
+      --color-codemirror-syntax-comment: #75715e;
+      --color-codemirror-syntax-constant: red;
+      --color-codemirror-syntax-entity: red;
+      --color-codemirror-syntax-keyword: #f92672;
+      --color-codemirror-syntax-storage: #f92672;
+      --color-codemirror-syntax-string: #e6db74;
+      --color-codemirror-syntax-support: red;
+      --color-codemirror-syntax-variable: #66d9ef;
+  }
+
+  /* PrettyLights */
+  .highlight {
+    --color-text-primary: #f8f8f2;
+    --color-bg-tertiary: rgba(255, 255, 255, 0.075);
+  }
+  table.highlight,
+  table.diff-table tr:not(.inline-comments) {
+    background-color: #141414;
+
+    --color-bg-primary: #141414;
+    --color-auto-gray-1: #141414;
+  }
+  .pl-c, .pl-c span { font-style: italic; } /* comment */
+
+  [data-color-mode] .inline-comments {
+    --color-text-primary: #24292e;
+  }
+
+  [data-color-mode="dark"] .inline-comments {
+    --color-text-primary: #c9d1d9;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    [data-color-mode="auto"] .inline-comments {
+      --color-text-primary: #c9d1d9;
+    }
+  }
+
+  /* codeMirror */
+  .cm-atom, .cm-number {
+    --color-auto-blue-6: var(--color-prettylights-syntax-constant);
+  }
+
+  /* Code navigation */
+  .pl-token.active, .pl-token:hover {
+    background: var(--color-prettylights-syntax-entity);
+    color: #272822;
+  }
+  .TagsearchPopover-list {
+    background-color: #141414;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    --color-text-primary: #f8f8f2;
+    --color-bg-tertiary: rgba(255, 255, 255, 0.075);
+  }
+
+  .blob-code-addition .x {
+    --color-auto-gray-9: #f0f6fc;
+  }
+  .blob-code-deletion .x {
+    --color-auto-gray-9: #f0f6fc;
+  }
+}
+@-moz-document domain("github.com") {
+  /* Opinionated Styles */
+
+  /* PrettyLights */
+  /* Highlight current line of code - broken right now */
+  .diff-table > tbody > tr[data-hunk]:hover > td,
+  .highlight > tbody > tr:hover > td {
+    position: relative;
+  }
+  .diff-table > tbody > tr[data-hunk]:hover > td::after,
+  .highlight > tbody > tr:not(.divider):hover > td::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.075);
+    pointer-events: none;
+  }
+
+  .markdown-body .highlight pre,
+  .markdown-body pre {
+    --color-bg-tertiary: #141414;
+    color: var(--color-text-primary);
+  }
+
+  /* Styles inline code blocks in comments etc. */
+  .markdown-body code {
+    --x-color-markdown-code-text: var(--color-prettylights-syntax-string);
+    --color-markdown-code-bg: #272822;
+
+    color: var(--x-color-markdown-code-text);
+  }
+  .markdown-body a code {
+    --x-color-markdown-code-text: var(--color-text-link);
+  }
+
+  /* OctoLinker */
+  a.octolinker-link[href] {
+    color: #58a6ff; /* Force the dark mode color */
+  }
+}
+@-moz-document domain("github.com") {
+  /* Hacks */
+
+  .file .CodeMirror {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
