@@ -78,9 +78,11 @@
   table.diff-table tr:not(.inline-comments) {
     background-color: #141414;
 
+    --color-text-primary: #f8f8f2; /* for pr review comments */
     --color-bg-primary: #141414;
     --color-auto-gray-1: #141414;
   }
+  .data.file table { --color-text-primary: #f8f8f2; } /* suggested changes */
   .pl-c, .pl-c span { font-style: italic; } /* comment */
 
   [data-color-mode] .inline-comments {
