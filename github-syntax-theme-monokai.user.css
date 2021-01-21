@@ -46,6 +46,8 @@
       --color-prettylights-syntax-invalid-illegal-bg: #a6e22e;
       --color-prettylights-syntax-string-regexp: #a6e22e;
       --color-prettylights-syntax-markup-heading: #66d9ef;
+      --color-prettylights-syntax-markup-italic: #66d9ef; /* #c9d1d9 */
+      --color-prettylights-syntax-markup-bold: #66d9ef; /* #c9d1d9 */
       --color-prettylights-syntax-meta-diff-range: #66d9ef;
 
       --color-codemirror-text: #f8f8f2;
