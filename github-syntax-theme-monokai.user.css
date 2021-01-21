@@ -8,7 +8,7 @@
 @author      Brian Surowiec (https://github.com/xt0rted)
 ==/UserStyle== */
 @-moz-document domain("github.com") {
-  html:not([data-color-mode]),                     /* themes aren't applied when logged out */
+  :root,                                           /* themes attributes aren't applied when logged out */
   [data-color-mode],                               /* not all pages are using the data-*-theme attributes right now */
   [data-color-mode=auto][data-light-theme=light],  /* system settings */
   [data-color-mode=light][data-light-theme=light], /* explicit light mode */
