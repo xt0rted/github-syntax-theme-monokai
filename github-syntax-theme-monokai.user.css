@@ -167,6 +167,7 @@
   /* OctoLinker */
   a.octolinker-link[href] {
     color: #58a6ff; /* Force the dark mode color */
+    --color-prettylights-syntax-string: #58a6ff;
   }
 }
 @-moz-document domain("github.com") {
