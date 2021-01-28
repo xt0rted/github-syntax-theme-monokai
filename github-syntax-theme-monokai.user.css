@@ -70,6 +70,8 @@
       --color-codemirror-syntax-string: #e6db74;
       --color-codemirror-syntax-support: red;
       --color-codemirror-syntax-variable: #66d9ef;
+
+      --ghst-color-link-text: #58a6ff; /* dark mode --color-link-text */
   }
 
   /* PrettyLights */
@@ -157,6 +159,7 @@
   /* Styles inline code blocks in comments etc. */
   .markdown-body code {
     --x-color-markdown-code-text: var(--color-prettylights-syntax-string);
+    --color-text-link: var(--ghst-color-link-text);
     --color-markdown-code-bg: #272822;
 
     color: var(--x-color-markdown-code-text);
@@ -167,8 +170,8 @@
 
   /* OctoLinker */
   a.octolinker-link[href] {
-    color: #58a6ff; /* Force the dark mode color */
-    --color-prettylights-syntax-string: #58a6ff;
+    color: var(--ghst-color-link-text);
+    --color-prettylights-syntax-string: var(--ghst-color-link-text);
   }
 }
 @-moz-document domain("github.com") {
