@@ -16,8 +16,9 @@
   {
       --color-search-keyword-hl: rgba(187, 128, 9, 0.4);
 
-      --color-blob-line-highlight-bg: rgb(187, 128, 9, .1);
-      --color-blob-line-highlight-border: #bb8009;
+      --color-code-selection-bg: rgba(121, 192, 255, 0.3);
+      --color-blob-line-highlight-bg: rgb(187, 128, 9, 0.1); /* rgba(210,153,34,0.15) */
+      --color-blob-line-highlight-border: #bb8009; /* #e3b341 */
 
       --color-diff-blob-num-text: rgba(240, 246, 252, 0.3);
       --color-diff-blob-num-hover-text: rgba(240, 246, 252, 0.6);
