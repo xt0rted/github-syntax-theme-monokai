@@ -182,3 +182,11 @@
     border-bottom-right-radius: 6px;
   }
 }
+@-moz-document domain("gist.github.com") {
+  /* Hacks */
+
+  table.highlight {
+    border-radius: 6px; /* Removes the corner overflow this style adds */
+    margin-bottom: 1px; /* Makes the bottom border visible again */
+  }
+}
