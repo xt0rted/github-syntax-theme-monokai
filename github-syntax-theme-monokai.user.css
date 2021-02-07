@@ -80,7 +80,9 @@
     --color-bg-tertiary: rgba(255, 255, 255, 0.075);
   }
   table.highlight,
-  table.diff-table tr:not(.inline-comments) {
+  table.diff-table tr:not(.inline-comments),
+  .blob-wrapper-embedded /* embedded code snippets - ensures a background color when there's no overflow */
+  {
     background-color: #141414;
 
     --color-text-primary: #f8f8f2; /* for pr review comments */
@@ -177,7 +179,8 @@
 @-moz-document domain("github.com") {
   /* Hacks */
 
-  .file .CodeMirror {
+  .file .CodeMirror,
+  .blob-wrapper-embedded {
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
   }
