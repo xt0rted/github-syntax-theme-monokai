@@ -188,7 +188,7 @@
 @-moz-document domain("gist.github.com") {
   /* Hacks */
 
-  table.highlight {
+  .link-overlay + .file table.highlight {
     border-radius: 6px; /* Removes the corner overflow this style adds */
     margin-bottom: 1px; /* Makes the bottom border visible again */
   }
