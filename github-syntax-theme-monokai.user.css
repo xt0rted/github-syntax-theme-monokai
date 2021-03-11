@@ -8,11 +8,12 @@
 @author      Brian Surowiec (https://github.com/xt0rted)
 ==/UserStyle== */
 @-moz-document domain("github.com") {
-  :root,                                           /* themes attributes aren't applied when logged out */
-  [data-color-mode],                               /* not all pages are using the data-*-theme attributes right now */
-  [data-color-mode=auto][data-light-theme=light],  /* system settings */
-  [data-color-mode=light][data-light-theme=light], /* explicit light mode */
-  [data-color-mode=dark][data-dark-theme=dark]     /* explicit dark mode*/
+  :root,                                              /* themes attributes aren't applied when logged out */
+  [data-color-mode],                                  /* not all pages are using the data-*-theme attributes right now */
+  [data-color-mode=auto][data-light-theme=light],     /* system settings */
+  [data-color-mode=light][data-light-theme=light],    /* explicit light mode */
+  [data-color-mode=dark][data-dark-theme=dark],       /* explicit dark mode*/
+  [data-color-mode=dark][data-dark-theme=dark_dimmed] /* explicit dark dimmed mode*/
   {
       --color-search-keyword-hl: rgba(187, 128, 9, 0.4);
 
