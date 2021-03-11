@@ -76,9 +76,10 @@
   }
 
   /* PrettyLights */
-  .highlight {
+  .highlight,
+  .markdown-body pre /* markdown previews */
+  {
     --color-text-primary: #f8f8f2;
-    --color-bg-tertiary: rgba(255, 255, 255, 0.075);
   }
   table.highlight,
   table.diff-table tr:not(.inline-comments),
