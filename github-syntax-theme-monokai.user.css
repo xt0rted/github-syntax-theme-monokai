@@ -142,7 +142,7 @@
     position: relative;
   }
   .diff-table > tbody > tr[data-hunk]:hover > td::after,
-  .highlight > tbody > tr:not(.divider):hover > td::after {
+  .highlight > tbody > tr:not(.divider):not(.js-inline-annotations):hover > td::after {
     content: "";
     position: absolute;
     left: 0;
