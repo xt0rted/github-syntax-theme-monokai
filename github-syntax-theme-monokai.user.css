@@ -178,6 +178,11 @@
     --color-prettylights-syntax-string: var(--ghst-color-link-text);
     --color-prettylights-syntax-variable: var(--ghst-color-link-text);
   }
+
+  /* Render Whitespace on GitHub */
+  .glebm-ws {
+    color: rgba(248, 248, 242, .5);
+  }
 }
 @-moz-document domain("github.com") {
   /* Hacks */
