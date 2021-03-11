@@ -175,6 +175,7 @@
   a.octolinker-link[href] {
     color: var(--ghst-color-link-text);
     --color-prettylights-syntax-string: var(--ghst-color-link-text);
+    --color-prettylights-syntax-variable: var(--ghst-color-link-text);
   }
 }
 @-moz-document domain("github.com") {
