@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Syntax Theme Monokai
 @namespace   xt0rted
-@version     1.2.0
+@version     1.2.1
 @homepageURL https://github.com/xt0rted/github-syntax-theme-monokai
 @updateURL   https://raw.githubusercontent.com/xt0rted/github-syntax-theme-monokai/main/github-syntax-theme-monokai.user.css
 @license     CC-BY-SA-4.0
@@ -158,6 +158,7 @@
   .markdown-body .highlight pre,
   .markdown-body pre {
     --color-bg-tertiary: #141414;
+    --color-canvas-subtle: #141414;
     color: var(--color-text-primary);
   }
 
