@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Syntax Theme Monokai
 @namespace   xt0rted
-@version     1.2.1
+@version     1.2.2
 @homepageURL https://github.com/xt0rted/github-syntax-theme-monokai
 @updateURL   https://raw.githubusercontent.com/xt0rted/github-syntax-theme-monokai/main/github-syntax-theme-monokai.user.css
 @license     CC-BY-SA-4.0
@@ -163,6 +163,11 @@
   }
 
   /* Styles inline code blocks in comments etc. */
+  [data-color-mode=auto][data-light-theme=light] .markdown-body code,
+  [data-color-mode=auto][data-dark-theme=light] .markdown-body code {
+    --color-neutral-muted: #141414;
+    --color-prettylights-syntax-string: #E6DB74;
+  }
   .markdown-body code {
     --x-color-markdown-code-text: var(--color-prettylights-syntax-string);
     --color-text-link: var(--ghst-color-link-text);
@@ -184,6 +189,11 @@
   /* Render Whitespace on GitHub */
   .glebm-ws {
     color: rgba(248, 248, 242, .5);
+  }
+}
+@-moz-document url-prefix("https://github.com/marketplace") {
+  .markdown-body code {
+    --color-neutral-muted: #141414;
   }
 }
 @-moz-document domain("github.com") {
