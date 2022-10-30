@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        GitHub Syntax Theme Monokai
 @namespace   xt0rted
-@version     1.2.2
+@version     1.2.3
 @homepageURL https://github.com/xt0rted/github-syntax-theme-monokai
 @updateURL   https://raw.githubusercontent.com/xt0rted/github-syntax-theme-monokai/main/github-syntax-theme-monokai.user.css
 @license     CC-BY-SA-4.0
@@ -74,6 +74,19 @@
       --color-codemirror-syntax-variable: #66d9ef;
 
       --ghst-color-link-text: #58a6ff; /* dark mode --color-link-text */
+  }
+
+  [data-color-mode=auto][data-light-theme*=light],
+  [data-color-mode=auto][data-dark-theme*=light],
+  [data-color-mode=light][data-light-theme*=light] {
+    --color-neutral-muted: #141414;
+    --color-prettylights-syntax-string: #e6db74;
+  }
+  
+  [data-color-mode=auto][data-light-theme*=light] .blob-code-inner,
+  [data-color-mode=auto][data-dark-theme*=light] .blob-code-inner,
+  [data-color-mode=light][data-light-theme*=light] .blob-code-inner {
+    --color-fg-default: #f8f8f2;
   }
 
   /* PrettyLights */
@@ -163,11 +176,6 @@
   }
 
   /* Styles inline code blocks in comments etc. */
-  [data-color-mode=auto][data-light-theme=light] .markdown-body code,
-  [data-color-mode=auto][data-dark-theme=light] .markdown-body code {
-    --color-neutral-muted: #141414;
-    --color-prettylights-syntax-string: #E6DB74;
-  }
   .markdown-body code {
     --x-color-markdown-code-text: var(--color-prettylights-syntax-string);
     --color-text-link: var(--ghst-color-link-text);
